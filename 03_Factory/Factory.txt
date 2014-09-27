@@ -1,0 +1,86 @@
+Creational Patterns - Factory Pattern
+
+Factory of what? Of classes. In simple words, if we have a 
+super class and n sub-classes, and based on data provided, 
+we have to return the object of one of the sub-classes, 
+we use a factory pattern.
+
+Example: Let’s suppose an application asks for
+entering the name and sex of a person. If the sex
+is Male (M), it displays welcome message saying 
+Hello Mr. <Name> and if the sex is Female (F), it 
+displays message saying Hello Ms <Name>.
+
+The skeleton of the code can be given here.
+
+public class Person {
+ 	// name string
+public String name;
+// gender : M or F
+private String gender;
+public String getName() {
+return name;
+}
+
+public String getGender() {
+return gender;
+}
+
+}// End of class
+
+This is a simple class Person having methods for 
+name and gender. Now, we will have two sub-classes, 
+Male and Female which will print the welcome 
+message on the screen.
+
+public class Male extends Person {
+ 	public Male(String fullName) {
+System.out.println("Hello Mr. "+fullName);
+}
+}// End of class
+
+Also, the class Female
+
+public class Female extends Person {
+ 	public Female(String fullNname) {
+System.out.println("Hello Ms. "+fullNname);
+}
+}// End of class
+
+Now, we have to create a client, or a SalutationFactory
+ which will return the welcome message depending on the data provided.
+
+public class SalutationFactory {
+ 	public static void main(String args[]) {
+SalutationFactory factory = new SalutationFactory();
+factory.getPerson(args[0], args[1]);
+}
+public Person getPerson(String name, String gender) {
+if (gender.equals("M"))
+return new Male(name);
+else if(gender.equals("F"))
+return new Female(name);
+else
+return null;
+}
+}// End of class
+This class accepts two arguments from the system at runtime and prints the names.
+
+Running the program:
+
+After compiling and running the code on my computer with the arguments Prashant and M:
+
+java Prashant M
+
+The result returned is: “Hello Mr. Prashant”.
+
+When to use a Factory Pattern?
+The Factory patterns can be used in following cases:
+1. When a class does not know which class of objects it must create.
+2. A class specifies its sub-classes to specify which objects to create.
+3. In programmer’s language (very raw form), you can use factory 
+pattern where you have to create an object of any one of sub-classes 
+depending on the data provided.
+
+
+

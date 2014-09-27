@@ -1,0 +1,216 @@
+Creational Patterns - Abstract Factory Pattern
+
+This pattern is one level of abstraction higher than factory pattern. 
+This means that the abstract factory returns the factory of classes. 
+Like Factory pattern returned one of the several sub-classes, this 
+returns such factory which later will return one of the sub-classes.
+
+Let’s understand this pattern with the help of an example.
+
+Suppose we need to get the specification of various parts of a 
+computer based on which work the computer will be used for.
+
+The different parts of computer are, say Monitor, RAM and Processor. 
+The different types of computers are PC, Workstation and Server. 
+
+So, here we have an abstract base class Computer.
+
+package creational.abstractfactory;
+public abstract class Computer {
+ 	/**
+* Abstract method, returns the Parts ideal for
+* Server
+* @return Parts
+*/
+public abstract Parts getRAM();
+/**
+* Abstract method, returns the Parts ideal for
+* Workstation
+* @return Parts
+*/
+public abstract Parts getProcessor();
+
+/**
+* Abstract method, returns the Parts ideal for
+* PC
+* @return Parts
+*/
+public abstract Parts getMonitor();
+
+}// End of class
+This class, as you can see, has three methods all returning
+ different parts of computer. They all return a method 
+called Parts. The specification of Parts will be different
+ for different types of computers. Let’s have a look at the class Parts.
+
+package creational.abstractfactory;
+public class Parts {
+
+ 	/**
+* specification of Part of Computer, String
+*/
+public String specification;
+/**
+* Constructor sets the name of OS
+* @param specification of Part of Computer
+*/
+public Parts(String specification) {
+this.specification = specification;
+}
+
+/**
+* Returns the name of the part of Computer
+*
+* @return specification of Part of Computer, String
+*/
+public String getSpecification() {
+return specification;
+}
+
+
+}// End of class
+
+And now lets go to the sub-classes of Computer. They are PC, Workstation and Server.
+
+package creational.abstractfactory;
+public class PC extends Computer {
+
+ 	/**
+* Method over-ridden from Computer, returns the Parts ideal for
+* Server
+* @return Parts
+*/
+public Parts getRAM() {
+return new Parts("512 MB");
+}
+/**
+* Method over-ridden from Computer, returns the Parts ideal for
+* Workstation
+* @return Parts
+*/
+public Parts getProcessor() {
+return new Parts("Celeron");
+}
+
+/**
+* Method over-ridden from Computer, returns the Parts ideal for
+* PC
+* @return Parts
+*/
+public Parts getMonitor() {
+return new Parts("15 inches");
+}
+}// End of class
+
+package creational.abstractfactory;
+
+public class Workstation extends Computer {
+ 	/**
+* Method over-ridden from Computer, returns the Parts ideal for
+* Server
+* @return Parts
+*/
+public Parts getRAM() {
+return new Parts("1 GB");
+}
+/**
+* Method over-ridden from Computer, returns the Parts ideal for
+* Workstation
+* @return Parts
+*/
+public Parts getProcessor() {
+return new Parts("Intel P 3");
+}
+
+/**
+* Method over-ridden from Computer, returns the Parts ideal for
+* PC
+* @return Parts
+*/
+public Parts getMonitor() {
+return new Parts("19 inches");
+}
+
+}// End of class
+
+package creational.abstractfactory;
+public class Server extends Computer{
+
+ 	/**
+* Method over-ridden from Computer, returns the Parts ideal for
+* Server
+* @return Parts
+*/
+public Parts getRAM() {
+return new Parts("4 GB");
+}
+/**
+* Method over-ridden from Computer, returns the Parts ideal for
+* Workstation
+* @return Parts
+*/
+public Parts getProcessor() {
+return new Parts("Intel P 4");
+}
+
+/**
+* Method over-ridden from Computer, returns the Parts ideal for
+* PC
+* @return Parts
+*/
+public Parts getMonitor() {
+return new Parts("17 inches");
+}
+
+}// End of class
+Now let’s have a look at the Abstract factory which returns a factory “Computer”. We call the class ComputerType.
+
+package creational.abstractfactory;
+
+/**
+* This is the computer abstract factory which returns one
+* of the three types of computers.
+*
+*/
+public class ComputerType {
+ 	private Computer comp;
+public static void main(String[] args) {
+
+ 	 	ComputerType type = new ComputerType();
+Computer computer = type.getComputer("Server");
+System.out.println("Monitor: "+computer.getMonitor().getSpecification());
+System.out.println("RAM: "+computer.getRAM().getSpecification());
+System.out.println("Processor: "+computer.getProcessor().getSpecification());
+
+ 	} 	 
+ 	 	
+/**
+* Returns a computer for a type
+*
+* @param computerType String, PC / Workstation / Server
+* @return Computer
+*/
+
+ 	public Computer getComputer(String computerType) {
+ 	 	if (computerType.equals("PC"))
+comp = new PC();
+else if(computerType.equals("Workstation"))
+comp = new Workstation();
+else if(computerType.equals("Server"))
+comp = new Server();
+return comp;
+
+ 	}	 
+}// End of class
+Running this class gives the output as this:
+
+Monitor: 17 inches
+RAM: 4 GB
+Processor: Intel P 4.
+
+When to use Abstract Factory Pattern?
+One of the main advantages of Abstract Factory Pattern is that it
+isolates the concrete classes that are generated. The names of 
+actual implementing classes are not needed to be known at the
+client side. Because of the isolation, you can change the implementation 
+from one factory to another.
