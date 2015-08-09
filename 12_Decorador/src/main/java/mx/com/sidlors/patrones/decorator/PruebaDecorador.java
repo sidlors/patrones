@@ -1,3 +1,5 @@
+package mx.com.sidlors.patrones.decorator;
+
 import java.util.Scanner;
 
 public class PruebaDecorador{

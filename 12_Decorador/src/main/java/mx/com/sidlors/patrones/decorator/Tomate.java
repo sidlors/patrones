@@ -1,3 +1,5 @@
+package mx.com.sidlors.patrones.decorator;
+
 public class Tomate extends DecoradorHamburguesa{
 	private Hamburguesa hamburguesa;
 
