@@ -2,7 +2,7 @@
 
 Los 19 Patrones de Diseño de GOF podemos clasificar en tres grandes grupos:
 
-* Patrones de creación. Estos patrones se utilizan cuando debemos crear objetos pero debemos tomar decisiones dinámicamente en el proceso de creación. Para ésto lo que hacemos es abstraer el proceso de creación de los objetos para realizar la decisión de qué objetos crear o cómo crearlos para el momento en que se tenga que hacer. 
+**Patrones de creación.** Estos patrones se utilizan cuando debemos crear objetos pero debemos tomar decisiones dinámicamente en el proceso de creación. Para ésto lo que hacemos es abstraer el proceso de creación de los objetos para realizar la decisión de qué objetos crear o cómo crearlos para el momento en que se tenga que hacer. 
 
 ### Patrones de creación son: 
   
@@ -13,7 +13,7 @@ Los 19 Patrones de Diseño de GOF podemos clasificar en tres grandes grupos:
   1. Prototype
   1. Singleton.
   
-* Patrones estructurales. Nos describen como utilizar estructuras de datos complejas a partir de elementos más simples. Sirven para crear las interconexiones entre los distintos objetos y que estas relaciones no se vean afectadas por cambios en los requisitos del programa. 
+**Patrones estructurales.** Nos describen como utilizar estructuras de datos complejas a partir de elementos más simples. Sirven para crear las interconexiones entre los distintos objetos y que estas relaciones no se vean afectadas por cambios en los requisitos del programa. 
 
 
 ### Los patrones estructurales son: 
@@ -25,7 +25,7 @@ Los 19 Patrones de Diseño de GOF podemos clasificar en tres grandes grupos:
   1. Flyweight
   1. Proxy.
 
-* Patrones de comportamiento. Fundamentalmente especifican el comportamiento entre objetos de nuestro programa. 
+**Patrones de comportamiento.** Fundamentalmente especifican el comportamiento entre objetos de nuestro programa. 
 
 
 ### Los patrones de Comportamiento son: 
