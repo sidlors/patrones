@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="observer">
+  <packagedElement xmi:type="uml:Package" xmi:id="_WcKh8D8cEeWGDs35EeRKBg" name="mx">
+    <packagedElement xmi:type="uml:Package" xmi:id="_WcOzYD8cEeWGDs35EeRKBg" name="com">
+      <packagedElement xmi:type="uml:Package" xmi:id="_WcOzYT8cEeWGDs35EeRKBg" name="sidlors">
+        <packagedElement xmi:type="uml:Package" xmi:id="_WcOzYj8cEeWGDs35EeRKBg" name="patrones">
+          <packagedElement xmi:type="uml:Package" xmi:id="_WcOzYz8cEeWGDs35EeRKBg" name="observer">
+            <packagedElement xmi:type="uml:Class" xmi:id="_WcQBgD8cEeWGDs35EeRKBg" name="Informador" clientDependency="_WfEsAD8cEeWGDs35EeRKBg">
+              <interfaceRealization xmi:id="_WfEsAD8cEeWGDs35EeRKBg" name="IObservador" supplier="_WcZygD8cEeWGDs35EeRKBg" client="_WcQBgD8cEeWGDs35EeRKBg" contract="_WcZygD8cEeWGDs35EeRKBg"/>
+              <ownedOperation xmi:id="_WkSjMD8cEeWGDs35EeRKBg" name="actualizar" visibility="public">
+                <ownedParameter xmi:id="_WkSjMT8cEeWGDs35EeRKBg" name="a">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_WkSjMj8cEeWGDs35EeRKBg" name="l">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Interface" xmi:id="_WcZygD8cEeWGDs35EeRKBg" name="IObservador">
+              <ownedOperation xmi:id="_WkVmgD8cEeWGDs35EeRKBg" name="actualizar" visibility="public">
+                <ownedParameter xmi:id="_WkVmgT8cEeWGDs35EeRKBg" name="accion">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_WkVmgj8cEeWGDs35EeRKBg" name="lugar">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_WccOwD8cEeWGDs35EeRKBg" name="Auditor" clientDependency="_WkWNkD8cEeWGDs35EeRKBg">
+              <interfaceRealization xmi:id="_WkWNkD8cEeWGDs35EeRKBg" name="IObservador" supplier="_WcZygD8cEeWGDs35EeRKBg" client="_WccOwD8cEeWGDs35EeRKBg" contract="_WcZygD8cEeWGDs35EeRKBg"/>
+              <ownedOperation xmi:id="_WkXbsD8cEeWGDs35EeRKBg" name="actualizar" visibility="public">
+                <ownedParameter xmi:id="_WkXbsT8cEeWGDs35EeRKBg" name="a">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_WkXbsj8cEeWGDs35EeRKBg" name="l">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_WceD8D8cEeWGDs35EeRKBg" name="Correo" clientDependency="_WkZQ4D8cEeWGDs35EeRKBg">
+              <interfaceRealization xmi:id="_WkZQ4D8cEeWGDs35EeRKBg" name="IObservador" supplier="_WcZygD8cEeWGDs35EeRKBg" client="_WceD8D8cEeWGDs35EeRKBg" contract="_WcZygD8cEeWGDs35EeRKBg"/>
+              <ownedOperation xmi:id="_WkafAD8cEeWGDs35EeRKBg" name="actualizar" visibility="public">
+                <ownedParameter xmi:id="_WkbGED8cEeWGDs35EeRKBg" name="a">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_WkbGET8cEeWGDs35EeRKBg" name="l">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_WchHQD8cEeWGDs35EeRKBg" name="subject">
+            <packagedElement xmi:type="uml:Interface" xmi:id="_WchuUD8cEeWGDs35EeRKBg" name="ISujeto">
+              <ownedOperation xmi:id="_WkeJYD8cEeWGDs35EeRKBg" name="registrarObs" visibility="public" isAbstract="true">
+                <ownedParameter xmi:id="_WkeJYT8cEeWGDs35EeRKBg" name="o" type="_WcZygD8cEeWGDs35EeRKBg"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_WkfXgD8cEeWGDs35EeRKBg" name="retirarObs" visibility="public" isAbstract="true">
+                <ownedParameter xmi:id="_WkfXgT8cEeWGDs35EeRKBg" name="o" type="_WcZygD8cEeWGDs35EeRKBg"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_WkgloD8cEeWGDs35EeRKBg" name="notificar" visibility="public" isAbstract="true"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_WcjjgD8cEeWGDs35EeRKBg" name="Sujeto" clientDependency="_WkgloT8cEeWGDs35EeRKBg">
+              <ownedAttribute xmi:id="_WkmFMD8cEeWGDs35EeRKBg" name="observadores" visibility="private" type="_WkhzwD8cEeWGDs35EeRKBg"/>
+              <ownedAttribute xmi:id="_WkuBAD8cEeWGDs35EeRKBg" name="accion" visibility="private">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <ownedAttribute xmi:id="_Wk1VwD8cEeWGDs35EeRKBg" name="lugar" visibility="private">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedAttribute>
+              <interfaceRealization xmi:id="_WkgloT8cEeWGDs35EeRKBg" name="ISujeto" supplier="_WchuUD8cEeWGDs35EeRKBg" client="_WcjjgD8cEeWGDs35EeRKBg" contract="_WchuUD8cEeWGDs35EeRKBg"/>
+              <ownedOperation xmi:id="_Wk6OQD8cEeWGDs35EeRKBg" name="registrarObs" visibility="public">
+                <ownedParameter xmi:id="_Wk6OQT8cEeWGDs35EeRKBg" name="o" type="_WcZygD8cEeWGDs35EeRKBg"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_Wk_GwD8cEeWGDs35EeRKBg" name="retirarObs" visibility="public">
+                <ownedParameter xmi:id="_Wk_GwT8cEeWGDs35EeRKBg" name="o" type="_WcZygD8cEeWGDs35EeRKBg"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_WlEmUD8cEeWGDs35EeRKBg" name="ejecutarAccion" visibility="public">
+                <ownedParameter xmi:id="_WlEmUT8cEeWGDs35EeRKBg" name="a">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+                <ownedParameter xmi:id="_WlEmUj8cEeWGDs35EeRKBg" name="l">
+                  <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_WlKF4D8cEeWGDs35EeRKBg" name="notificar" visibility="public"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_QXGywD8dEeWGDs35EeRKBg" name="obsevadores" memberEnd="_QXGywT8dEeWGDs35EeRKBg _QXGyxD8dEeWGDs35EeRKBg">
+              <ownedEnd xmi:id="_QXGywT8dEeWGDs35EeRKBg" name="" type="_WcjjgD8cEeWGDs35EeRKBg" association="_QXGywD8dEeWGDs35EeRKBg">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXGywj8dEeWGDs35EeRKBg"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXGywz8dEeWGDs35EeRKBg"/>
+              </ownedEnd>
+              <ownedEnd xmi:id="_QXGyxD8dEeWGDs35EeRKBg" name="subscritos" type="_WcZygD8cEeWGDs35EeRKBg" isUnique="false" association="_QXGywD8dEeWGDs35EeRKBg">
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QXGyxT8dEeWGDs35EeRKBg" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QXGyxj8dEeWGDs35EeRKBg" value="1"/>
+              </ownedEnd>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_WevU0D8cEeWGDs35EeRKBg" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_Wev74D8cEeWGDs35EeRKBg" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_We00YD8cEeWGDs35EeRKBg" name="ArrayList"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_WkhzwD8cEeWGDs35EeRKBg" name="ArrayList&lt;IObservador>"/>
+</uml:Model>

@@ -1,5 +1,5 @@
 package mx.com.sidlors.patrones.observer;
 
-public interface Observador{
+public interface IObservador{
 	public void actualizar(String accion, String lugar);
 }
