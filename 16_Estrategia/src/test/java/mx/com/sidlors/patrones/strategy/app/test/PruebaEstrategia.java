@@ -1,12 +1,12 @@
 package mx.com.sidlors.patrones.strategy.app.test;
 
-import mx.com.sidlors.patrones.strategy.algoritmo.Algoritmo;
-import mx.com.sidlors.patrones.strategy.algoritmo.EnAire;
-import mx.com.sidlors.patrones.strategy.algoritmo.EnAireVeloz;
-import mx.com.sidlors.patrones.strategy.algoritmo.EnTierra;
-import mx.com.sidlors.patrones.strategy.clases.Avion;
-import mx.com.sidlors.patrones.strategy.clases.AvionComercial;
-import mx.com.sidlors.patrones.strategy.clases.AvionRapido;
+import mx.com.sidlors.patrones.strategy.contexto.Avion;
+import mx.com.sidlors.patrones.strategy.contexto.AvionComercial;
+import mx.com.sidlors.patrones.strategy.contexto.AvionRapido;
+import mx.com.sidlors.patrones.strategy.estrategias.Algoritmo;
+import mx.com.sidlors.patrones.strategy.estrategias.EnAire;
+import mx.com.sidlors.patrones.strategy.estrategias.EnAireVeloz;
+import mx.com.sidlors.patrones.strategy.estrategias.EnTierra;
 
 import org.junit.Before;
 import org.junit.Test;
