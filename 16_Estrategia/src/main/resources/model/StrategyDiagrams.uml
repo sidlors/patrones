@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="StrategyDiagrams" viewpoint="">
+  <packagedElement xmi:type="uml:Package" xmi:id="_02NZoD8IEeWWIK3hm91q9A" name="mx.com.sidlors.patrones.strategy.algoritmo">
+    <packagedElement xmi:type="uml:Class" xmi:id="_G1ebkD8JEeWWIK3hm91q9A" name="EnTierra" clientDependency="_G30k8D8JEeWWIK3hm91q9A">
+      <interfaceRealization xmi:id="_G30k8D8JEeWWIK3hm91q9A" name="Algoritmo" client="_G1ebkD8JEeWWIK3hm91q9A">
+        <supplier xmi:type="uml:Interface" href="#_G3yvwD8JEeWWIK3hm91q9A"/>
+        <contract href="#_G3yvwD8JEeWWIK3hm91q9A"/>
+      </interfaceRealization>
+      <ownedOperation xmi:id="_G30k8T8JEeWWIK3hm91q9A" name="moverse" visibility="public"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="__sfmsD8IEeWWIK3hm91q9A" name="mx">
+    <packagedElement xmi:type="uml:Package" xmi:id="__sfmsT8IEeWWIK3hm91q9A" name="com">
+      <packagedElement xmi:type="uml:Package" xmi:id="__sgNwD8IEeWWIK3hm91q9A" name="sidlors">
+        <packagedElement xmi:type="uml:Package" xmi:id="__sgNwT8IEeWWIK3hm91q9A" name="patrones">
+          <packagedElement xmi:type="uml:Package" xmi:id="__sgNwj8IEeWWIK3hm91q9A" name="strategy">
+            <packagedElement xmi:type="uml:Package" xmi:id="__sgNwz8IEeWWIK3hm91q9A" name="algoritmo">
+              <packagedElement xmi:type="uml:Interface" xmi:id="__sg00D8IEeWWIK3hm91q9A" name="Algoritmo"/>
+              <packagedElement xmi:type="uml:Class" xmi:id="_DIsAwD8JEeWWIK3hm91q9A" name="EnAire" clientDependency="_DLD_UD8JEeWWIK3hm91q9A">
+                <interfaceRealization xmi:id="_DLD_UD8JEeWWIK3hm91q9A" name="Algoritmo" client="_DIsAwD8JEeWWIK3hm91q9A">
+                  <supplier xmi:type="uml:Interface" href="#_DLDYQD8JEeWWIK3hm91q9A"/>
+                  <contract href="#_DLDYQD8JEeWWIK3hm91q9A"/>
+                </interfaceRealization>
+                <ownedOperation xmi:id="_DLD_UT8JEeWWIK3hm91q9A" name="moverse" visibility="public"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_G1dNcT8JEeWWIK3hm91q9A" name="EnAireVeloz" clientDependency="_G3yvwT8JEeWWIK3hm91q9A">
+                <interfaceRealization xmi:id="_G3yvwT8JEeWWIK3hm91q9A" name="Algoritmo" client="_G1dNcT8JEeWWIK3hm91q9A">
+                  <supplier xmi:type="uml:Interface" href="#_G3yvwD8JEeWWIK3hm91q9A"/>
+                  <contract href="#_G3yvwD8JEeWWIK3hm91q9A"/>
+                </interfaceRealization>
+                <ownedOperation xmi:id="_G3zW0D8JEeWWIK3hm91q9A" name="moverse" visibility="public"/>
+              </packagedElement>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="_r7OwwD8KEeWWIK3hm91q9A" memberEnd="_r6LA0D8KEeWWIK3hm91q9A _r7OwwT8KEeWWIK3hm91q9A">
+              <ownedEnd xmi:id="_r7OwwT8KEeWWIK3hm91q9A" name="Avion" type="_r5S3Ej8KEeWWIK3hm91q9A" association="_r7OwwD8KEeWWIK3hm91q9A"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_r5S3Ej8KEeWWIK3hm91q9A" name="Avion" isAbstract="true">
+              <ownedAttribute xmi:id="_r6LA0D8KEeWWIK3hm91q9A" name="miAlgoritmo" visibility="private" association="_r7OwwD8KEeWWIK3hm91q9A">
+                <type xmi:type="uml:Interface" href="#_r6IkkT8KEeWWIK3hm91q9A"/>
+              </ownedAttribute>
+              <ownedOperation xmi:id="_r6M2AD8KEeWWIK3hm91q9A" name="setAlgoritmo" visibility="public">
+                <ownedParameter xmi:id="_r6M2AT8KEeWWIK3hm91q9A" name="a">
+                  <type xmi:type="uml:Interface" href="#_r6IkkT8KEeWWIK3hm91q9A"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:id="_r6OEID8KEeWWIK3hm91q9A" name="mover" visibility="public"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_r5UsQD8KEeWWIK3hm91q9A" name="AvionComercial">
+              <generalization xmi:id="_r6PSQD8KEeWWIK3hm91q9A" general="_r5S3Ej8KEeWWIK3hm91q9A"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_r5V6YD8KEeWWIK3hm91q9A" name="AvionRapido">
+              <generalization xmi:id="_r6PSQT8KEeWWIK3hm91q9A" general="_r5S3Ej8KEeWWIK3hm91q9A"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_t_p_RD8NEeWWIK3hm91q9A" name="app">
+              <packagedElement xmi:type="uml:Package" xmi:id="_t_p_RT8NEeWWIK3hm91q9A" name="test">
+                <packagedElement xmi:type="uml:Class" xmi:id="_t_qmUD8NEeWWIK3hm91q9A" name="PruebaEstrategia">
+                  <ownedOperation xmi:id="_uAhh8D8NEeWWIK3hm91q9A" name="strategyTest" visibility="public"/>
+                </packagedElement>
+              </packagedElement>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_NeQpQz8QEeWw_MdvucyRoQ" name="clases">
+              <packagedElement xmi:type="uml:Class" xmi:id="_NeRQUD8QEeWw_MdvucyRoQ" name="AvionComercial">
+                <generalization xmi:id="_Nfle8D8QEeWw_MdvucyRoQ" general="_NeSecD8QEeWw_MdvucyRoQ"/>
+                <ownedOperation xmi:id="_ydkNoD8QEeWw_MdvucyRoQ" name="AvionComercial"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_NeSecD8QEeWw_MdvucyRoQ" name="Avion" isAbstract="true">
+                <ownedAttribute xmi:id="_NfnUID8QEeWw_MdvucyRoQ" name="miAlgoritmo" visibility="private" association="_Ng4fcD8QEeWw_MdvucyRoQ">
+                  <type xmi:type="uml:Interface" href="#_NfkQ0T8QEeWw_MdvucyRoQ"/>
+                </ownedAttribute>
+                <ownedOperation xmi:id="_NfpwYD8QEeWw_MdvucyRoQ" name="setAlgoritmo" visibility="public">
+                  <ownedParameter xmi:id="_NfpwYT8QEeWw_MdvucyRoQ" name="a">
+                    <type xmi:type="uml:Interface" href="#_NfkQ0T8QEeWw_MdvucyRoQ"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:id="_NfrlkD8QEeWw_MdvucyRoQ" name="mover" visibility="public"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_NeUToD8QEeWw_MdvucyRoQ" name="AvionRapido">
+                <generalization xmi:id="_NftawD8QEeWw_MdvucyRoQ" general="_NeSecD8QEeWw_MdvucyRoQ"/>
+                <ownedOperation xmi:id="_2TwcED8QEeWw_MdvucyRoQ" name="AvionRapido"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Association" xmi:id="_Ng4fcD8QEeWw_MdvucyRoQ" memberEnd="_NfnUID8QEeWw_MdvucyRoQ _Ng4fcT8QEeWw_MdvucyRoQ">
+                <ownedEnd xmi:id="_Ng4fcT8QEeWw_MdvucyRoQ" name="" type="_NeSecD8QEeWw_MdvucyRoQ" association="_Ng4fcD8QEeWw_MdvucyRoQ"/>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Component" xmi:id="_cAuNID8QEeWw_MdvucyRoQ"/>
+              <profileApplication xmi:id="_DkU6QD8REeWw_MdvucyRoQ">
+                <eAnnotations xmi:id="_DkWIYD8REeWw_MdvucyRoQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                  <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+                </eAnnotations>
+                <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+              </profileApplication>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_hdySwD8QEeWw_MdvucyRoQ">
+      <eAnnotations xmi:id="_hd4ZYD8QEeWw_MdvucyRoQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_-gyWoD8KEeWWIK3hm91q9A" name="mx.com.sidlors.patrones.strategy.clases">
+    <packagedElement xmi:type="uml:Association" xmi:id="_RPSdID8LEeWWIK3hm91q9A" memberEnd="_RPSdIT8LEeWWIK3hm91q9A">
+      <ownedEnd xmi:id="_RPSdIT8LEeWWIK3hm91q9A" name="" association="_RPSdID8LEeWWIK3hm91q9A">
+        <type xmi:type="uml:Class" href="#_RNK9Qz8LEeWWIK3hm91q9A"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_z5t4AD8PEeWw_MdvucyRoQ" memberEnd="_z5ufED8PEeWw_MdvucyRoQ">
+      <ownedEnd xmi:id="_z5ufED8PEeWw_MdvucyRoQ" name="Avion" association="_z5t4AD8PEeWw_MdvucyRoQ">
+        <type xmi:type="uml:Class" href="#_z2FVMD8PEeWw_MdvucyRoQ"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_lFZE4j8LEeWWIK3hm91q9A" name="AvionRapido">
+    <generalization xmi:id="_lHXa0D8LEeWWIK3hm91q9A">
+      <general xmi:type="uml:Class" href="#_lHWzwD8LEeWWIK3hm91q9A"/>
+    </generalization>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_uAfFsD8NEeWWIK3hm91q9A" name="org">
+    <packagedElement xmi:type="uml:Package" xmi:id="_uAfswD8NEeWWIK3hm91q9A" name="junit"/>
+  </packagedElement>
+</uml:Model>

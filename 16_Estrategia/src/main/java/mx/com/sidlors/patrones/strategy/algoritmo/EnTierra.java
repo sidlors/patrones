@@ -1,4 +1,5 @@
-package mx.com.sidlors.patrones.strategy;
+package mx.com.sidlors.patrones.strategy.algoritmo;
+
 
 public class EnTierra implements Algoritmo{
 	@Override
