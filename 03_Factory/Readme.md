@@ -20,17 +20,17 @@ So far we have seen the classes need to be designed for making a CarFactory. Let
 
 CarType.java will hold the types of car and will provide car types to all other classes
 
-´´´java
+```java
 package designPatterns.creational.factory;
 
 public enum CarType {
     SMALL, SEDAN, LUXURY
 }
-´´´
+```
 Car.java is parent class of all car instances and it will also contain the common logic applicable in car making of all types.
 
 
-´´´java
+```java
 package designPatterns.creational.factory;
 
 public abstract class Car {
@@ -57,10 +57,11 @@ public abstract class Car {
 		this.model = model;
 	}
 }
-´´´
+```
 
 LuxuryCar.java is concrete implementation of car type LUXURY
-´´´java
+
+```java
 package designPatterns.creational.factory;
 
 public class LuxuryCar extends Car {
@@ -76,11 +77,11 @@ public class LuxuryCar extends Car {
 		// add accessories
 	}
 }
-´´´
+```
 
 SmallCar.java is concrete implementation of car type SMALL
 
-´´´java
+```java
 package designPatterns.creational.factory;
 
 public class SmallCar extends Car {
@@ -96,11 +97,11 @@ public class SmallCar extends Car {
 		// add accessories
 	}
 }
-´´´
+```
 
 SedanCar.java is concrete implementation of car type SEDAN
 
-´´´java
+```java
 package designPatterns.creational.factory;
 
 public class SedanCar extends Car {
@@ -116,11 +117,11 @@ public class SedanCar extends Car {
 		// add accessories
 	}
 }
-´´´
+```
 CarFactory.java is our main class implemented using factory pattern. It instantiates a car instance only after determining its type.
 
 
-´´´java
+```java
 package designPatterns.creational.factory;
 
 public class CarFactory {
@@ -146,11 +147,11 @@ public class CarFactory {
 		return car;
 	}
 }
-´´´
+```
 
 In TestFactoryPattern.java, we will test our factory code. Lets run this class.
 
-´´´java
+```java
 package designPatterns.creational.factory;
 
 public class TestFactoryPattern {
@@ -160,7 +161,7 @@ public class TestFactoryPattern {
 		System.out.println(CarFactory.buildCar(CarType.LUXURY));
 	}
 }
-´´´
+```
 Output:
 
 Building small car
