@@ -186,7 +186,9 @@ Final notes
 
 Factory pattern is most suitable where there is some complex object creation steps are involved. To ensure that these steps are centralized and not exposed to composing classes, factory pattern should be used. We can see many examples of factory pattern in JDK itself e.g.
 
-java.sql.DriverManager#getConnection()
-java.net.URL#openConnection()
-java.lang.Class#newInstance()
-java.lang.Class#forName()
+* java.sql.DriverManager#getConnection()
+* java.net.URL#openConnection()
+* java.lang.Class#newInstance()
+* java.lang.Class#forName()
+
+:)
