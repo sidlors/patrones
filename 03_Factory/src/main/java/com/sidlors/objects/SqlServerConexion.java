@@ -1,4 +1,4 @@
-package com.sidlors.factory;
+package com.sidlors.objects;
 
 public class SqlServerConexion extends Conexion{
 		//constructor vacio

@@ -1,4 +1,4 @@
-package com.sidlors.factory;
+package com.sidlors.objects;
 
 public class MySqlConexion extends Conexion{
 		//constructor vacio

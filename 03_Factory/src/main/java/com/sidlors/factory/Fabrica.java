@@ -1,5 +1,10 @@
 package com.sidlors.factory;
 
+import com.sidlors.objects.Conexion;
+import com.sidlors.objects.MySqlConexion;
+import com.sidlors.objects.OracleConexion;
+import com.sidlors.objects.SqlServerConexion;
+
 public class Fabrica{
 	//Nombre del tipo de conexion
 	protected String tipo;

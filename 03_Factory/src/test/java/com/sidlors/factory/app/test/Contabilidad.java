@@ -1,5 +1,8 @@
-package com.sidlors.factory;
+package com.sidlors.factory.app.test;
 import java.util.Scanner;
+
+import com.sidlors.factory.Fabrica;
+import com.sidlors.objects.Conexion;
 
 public class Contabilidad{
 

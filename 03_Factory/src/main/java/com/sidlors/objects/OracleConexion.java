@@ -1,4 +1,4 @@
-package com.sidlors.factory;
+package com.sidlors.objects;
 
 public class OracleConexion extends Conexion{
 		//constructor vacio
