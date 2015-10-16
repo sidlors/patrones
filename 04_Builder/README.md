@@ -81,7 +81,7 @@ La clase no tiene la opción de hacer cumplir la coherencia simplemente mediante
 
 Afortunadamente, hay una tercera alternativa que combina la seguridad del patron telescópico y la legibilidad de la patron JavaBeans. 
 
-Es una forma de la Patrón del constructor [Gamma95, p. 97]. En lugar de hacer el objeto deseado directamente, el cliente llama a un constructor (o fábrica estática) con todos los parámetros necesarios y obtiene un objeto constructor. 
+Es una forma del patrón *Builder* [Gamma95, p. 97]. En lugar de hacer el objeto deseado directamente, el cliente llama a un constructor (o fábrica estática) con todos los parámetros necesarios y obtiene un objeto constructor. 
 
 A continuación, el cliente llama a los métodos setter-como en el constructor y luego un llamado a cada parámetro opcional. Por último, el cliente llama a un constructor sin parámetros para generar el objeto, que es inmutable. El constructor es una clase estática miembro de la clase que se basa. 
 
