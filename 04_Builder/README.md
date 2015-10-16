@@ -2,51 +2,66 @@
 
 ###Creating and Destroying Objects
 
-Static factories and constructors share a limitation: they do not scale well to large numbers of optional parameters. Consider the case of a class representing the
-Nutrition Facts label that appears on packaged foods. These labels have a few required fields—serving size, servings per container, and calories per serving—
-and over twenty optional fields—total fat, saturated fat, trans fat, cholesterol, sodium, and so on. Most products have nonzero values for only a few of these
-optional fields.
 
-What sort of constructors or static factories should you write for such a class?
+Fábricas estáticas (metodos *'constructores'* estaticos ) comparten una limitación: **no escala bien a un gran número de parámetros opcionales**. 
 
-Traditionally, programmers have used the telescoping constructor pattern, in which you provide a constructor with only the required parameters, another with a
-single optional parameter, a third with two optional parameters, and so on, culminating in a constructor with all the optional parameters. Here’s how it looks in
-practice. For brevity’s sake, only four optional fields are shown:
+Consideremos el caso de una clase que representa la etiqueta de Datos de Nutrición que aparece en los alimentos envasados. Estas etiquetas tienen un tamaño de unos pocos campos requerido de porción , porciones por envase y calorías por racion y más de veinte opcionales: grasa totales, grasas saturadas, grasas trans, colesterol, sodio, y así sucesivamente. 
+
+La mayoría de los productos tienen valores distintos de cero sólo para unos pocos de estos campos opcionales. 
+
+¿Qué clase de constructores o fábrica estática se debe escribir para esa clase? Tradicionalmente, los programadores han utilizado el patrón **constructor telescópico**, en el que declaramos un constructor con sólo los parámetros obligatorios, otro constuctor con un solo parámetros opcional, un tercero constructor con dos parámetros opcionales, y así seguiriamos con los constructores sucesivamente que al final terminariamos con un constructor con todos los parámetros opcionales.
+
+Para abreviar vamos a ver el ejemplo con sólo cuatro campos opcionales se indican:
+
+
 
 ```java
 // Telescoping constructor pattern - does not scale well!
 public class NutritionFacts {
-private final int servingSize; // (mL) required
-private final int servings; // (per container) required
-private final int calories; // optional
-private final int fat; // (g) optional
-private final int sodium; // (mg) optional
-private final int carbohydrate; // (g) optional
-public NutritionFacts(int servingSize, int servings) {
-this(servingSize, servings, 0);
-}
-public NutritionFacts(int servingSize, int servings,
-int calories) {
-this(servingSize, servings, calories, 0);
-}
-public NutritionFacts(int servingSize, int servings,
-int calories, int fat) {
-this(servingSize, servings, calories, fat, 0);
-}
-public NutritionFacts(int servingSize, int servings,
-int calories, int fat, int sodium) {
-this(servingSize, servings, calories, fat, sodium, 0);
-}
-
-public NutritionFacts(int servingSize, int servings,
-int calories, int fat, int sodium, int carbohydrate) {
-this.servingSize = servingSize;
-this.servings = servings;
-this.calories = calories;
-this.fat = fat;
-this.sodium = sodium;
-this.carbohydrate = carbohydrate;
-}
+       private final int servingSize; // (mL) required
+       private final int servings; // (per container) required
+       private final int calories; // optional
+       private final int fat; // (g) optional
+       private final int sodium; // (mg) optional
+       private final int carbohydrate; // (g) optional
+       
+       public NutritionFacts(int servingSize, int servings) {
+           this(servingSize, servings, 0);
+       }
+       
+       public NutritionFacts(int servingSize, int servings,int calories) {
+          this(servingSize, servings, calories, 0);
+       }
+       
+       public NutritionFacts(int servingSize, int servings,int calories, int fat) {
+          this(servingSize, servings, calories, fat, 0);
+       }
+       
+       public NutritionFacts(int servingSize, int servings,int calories, int fat, int sodium) {
+          this(servingSize, servings, calories, fat, sodium, 0);
+       }
+       
+       public NutritionFacts(int servingSize, int servings,int calories, int fat, int sodium, int carbohydrate) {
+        this.servingSize = servingSize;
+        this.servings = servings;
+        this.calories = calories;
+        this.fat = fat;
+        this.sodium = sodium;
+        this.carbohydrate = carbohydrate;
+       }
 }
 ```
+
+Entoces cuando se desé crear una instancia, se utiliza el constructor con la más corta lista de parámetros que contiene todos los parámetros que desea establecer:
+
+```java
+NutritionFacts cocacola = nuevos NutritionFacts (240, 8, 100, 0, 35, 27);
+```
+
+
+Normalmente esta invocación al constructor requerirá muchos parámetros que no se quieren configurar, pero estás obligado a pasar un valor para ellos de todos modos. En este caso, pasamos por un valor de 0 para la grasa. Con "sólo" seis parámetros esto puede no parecer tan malo, pero se vuelve rápidamente de la mano como el número de parámetros aumenta.
+
+En resumen, el patrón constructor telescópica funciona, pero es difícil de escribir código de cliente cuando hay muchos parámetros, y más difícil aún que lo lean. Secuencias largas de parámetros idénticamente escritas pueden causar errores sutiles. **Si el cliente invierte accidentalmente dos de estos parámetros, el compilador no se quejará, pero el programa se portan mal en tiempo de ejecución.**
+
+Una segunda alternativa cuando se enfrentan con muchos parámetros del constructor es el patrón JavaBeans, en el que se llama a un constructor sin parámetros para crear el objeto y luego llamar a los métodos setter para ajustar cada parámetro requerido y cada parámetro opcional de interés:
 
