@@ -1,3 +1,6 @@
+#Observer
+
+
 Observador (en inglés: Observer) Se trata de un patrón de comportamiento, es un patrón de diseño que define una dependencia del tipo uno-a-muchos entre objetos, de manera que cuando uno de los objetos cambia
 su estado, notifica este cambio a todos los dependientes. es decir, está relacionado con algoritmos de funcionamiento y asignación de responsabilidades a clases y objetos. 
 Los patrones de comportamiento describen no solamente estructuras de relación entre objetos o clases sino también esquemas de comunicación entre ellos y se pueden clasificar
