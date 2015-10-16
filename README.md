@@ -7,7 +7,7 @@ Los 19 Patrones de Diseño de GOF podemos clasificar en tres grandes grupos:
 ### Patrones de creación son: 
   
   1. [Abstract Factory](05_AbstractFactory/Readme.md#abstractfactory)
-  1. Builder
+  1. [Builder](04_Builder#builder)
   1. Factory Method
   1. Object Pool
   1. Prototype
