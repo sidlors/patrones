@@ -1,4 +1,4 @@
-
+#Singleton
 ![](http://snag.gy/9DRvf.jpg)
 
 Toda aplicacion Java debe asegurar que la instancia Singleton pueda trabajar correctamente con la presencia de multihilos (***thread safe***)
