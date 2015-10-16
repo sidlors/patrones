@@ -79,8 +79,13 @@ Desafortunadamente, el patrón JavaBeans tiene serias desventajas de su propia n
 La clase no tiene la opción de hacer cumplir la coherencia simplemente mediante la comprobación de la validez de la constructor parámetros. El intento de usar un objeto cuando está en un estado incoherente puede causar fallas que están muy lejos de un código que contiene el error, por lo tanto, difícil de depurar. Una desventaja relacionada es que el patrón se opone a JavaBeans la posibilidad de hacer una clase inmutable, y requiere esfuerzo añadido por parte del programador para garantizar el **thread safety**
 
 
-Afortunadamente, hay una tercera alternativa que combina la seguridad del telescópica patrón constructor con la legibilidad de la pauta JavaBeans. Es una forma de la Patrón del constructor [Gamma95, p. 97]. En lugar de hacer el objeto deseado directamente, el cliente llama a un constructor (o fábrica estática) con todos los parámetros necesarios y obtiene un objeto constructor. A continuación, el cliente llama a los métodos setter-como en el constructor oponerse a ajustar cada parámetro opcional de interés. Por último, el cliente llama a un sin parámetros
-construir método para generar el objeto, que es inmutable. El constructor es una clase estática miembro (artículo 22) de la clase que se basa. Así es como se ve en la práctica:
+Afortunadamente, hay una tercera alternativa que combina la seguridad del patron telescópico y la legibilidad de la patron JavaBeans. 
+
+Es una forma de la Patrón del constructor [Gamma95, p. 97]. En lugar de hacer el objeto deseado directamente, el cliente llama a un constructor (o fábrica estática) con todos los parámetros necesarios y obtiene un objeto constructor. 
+
+A continuación, el cliente llama a los métodos setter-como en el constructor y luego un llamado a cada parámetro opcional. Por último, el cliente llama a un constructor sin parámetros para generar el objeto, que es inmutable. El constructor es una clase estática miembro de la clase que se basa. 
+
+Ejemplo:
 
 ```java
 // Builder Pattern
@@ -91,6 +96,16 @@ public class NutritionFacts {
        private final int fat;
        private final int sodium;
        private final int carbohydrate;
+       
+       private NutritionFacts(Builder builder) {
+              servingSize = builder.servingSize;
+              servings = builder.servings;
+              calories = builder.calories;
+              fat = builder.fat;
+              sodium = builder.sodium;
+              carbohydrate = builder.carbohydrate;
+       }
+
        public static class Builder {
               // Required parameters
               private final int servingSize;
@@ -101,33 +116,25 @@ public class NutritionFacts {
               private int carbohydrate = 0;
               private int sodium = 0;
               public Builder(int servingSize, int servings) {
-              this.servingSize = servingSize;
-              this.servings = servings;
+                     this.servingSize = servingSize;
+                     this.servings = servings;
+              }
+              public Builder calories(int val){
+                     calories = val; return this; 
+              }
+              public Builder fat(int val){ 
+              fat = val; return this; 
+              }
+              public Builder carbohydrate(int val){
+              carbohydrate = val; return this; 
+              }
+              public Builder sodium(int val){
+              sodium = val; return this; 
+              }
+              public NutritionFacts build() {
+              return new NutritionFacts(this);
+              }
        }
-       public Builder calories(int val){
-              calories = val; return this; 
-       }
-       public Builder fat(int val){ 
-       fat = val; return this; 
-       }
-       public Builder carbohydrate(int val){
-       carbohydrate = val; return this; 
-       }
-       public Builder sodium(int val){
-       sodium = val; return this; 
-       }
-       public NutritionFacts build() {
-       return new NutritionFacts(this);
-       }
-}
-private NutritionFacts(Builder builder) {
-       servingSize = builder.servingSize;
-       servings = builder.servings;
-       calories = builder.calories;
-       fat = builder.fat;
-       sodium = builder.sodium;
-       carbohydrate = builder.carbohydrate;
-}
 }
 ```
 
