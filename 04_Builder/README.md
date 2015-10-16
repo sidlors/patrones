@@ -1,6 +1,6 @@
 #Builder
 
-###Creating and Destroying Objects
+###Creando Objetos
 
 
 Fábricas estáticas (metodos *'constructores'* estaticos ) comparten una limitación: **no escala bien a un gran número de parámetros opcionales**. 
@@ -73,4 +73,8 @@ cocaCola.setCalories(100);
 cocaCola.setSodium(35);
 cocaCola.setCarbohydrate(27);
 ```
+
+Desafortunadamente, el patrón JavaBeans tiene serias desventajas de su propia naturaleza. Debido a que la construcción se divide en varias llamadas al objeto, un JavaBean puede estar inconsistente en parte de su estado a través de su construcción. 
+
+La clase no tiene la opción de hacer cumplir la coherencia simplemente mediante la comprobación de la validez de la constructor parámetros. El intento de usar un objeto cuando está en un estado incoherente puede causar fallas que están muy lejos de un código que contiene el error, por lo tanto, difícil de depurar. Una desventaja relacionada es que el patrón se opone a JavaBeans la posibilidad de hacer una clase inmutable, y requiere esfuerzo añadido por parte del programador para garantizar el ** thread safety**
 
