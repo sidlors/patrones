@@ -65,3 +65,12 @@ En resumen, el patrón constructor telescópica funciona, pero es difícil de es
 
 Una segunda alternativa cuando se enfrentan con muchos parámetros del constructor es el patrón JavaBeans, en el que se llama a un constructor sin parámetros para crear el objeto y luego llamar a los métodos setter para ajustar cada parámetro requerido y cada parámetro opcional de interés:
 
+```java
+NutritionFacts cocaCola = new NutritionFacts();
+cocaCola.setServingSize(240);
+cocaCola.setServings(8);
+cocaCola.setCalories(100);
+cocaCola.setSodium(35);
+cocaCola.setCarbohydrate(27);
+```
+
