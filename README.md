@@ -11,7 +11,7 @@ Los 19 Patrones de Diseño de GOF podemos clasificar en tres grandes grupos:
   1. Factory Method
   1. Object Pool
   1. Prototype
-  1. Singleton.
+  1. [Singleton](02_Singleton/Readme.md#singleton)
   
 **Patrones estructurales.** Nos describen como utilizar estructuras de datos complejas a partir de elementos más simples. Sirven para crear las interconexiones entre los distintos objetos y que estas relaciones no se vean afectadas por cambios en los requisitos del programa. 
 
