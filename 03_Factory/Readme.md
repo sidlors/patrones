@@ -9,24 +9,14 @@ Vamos a mostrar un patrón creacional, el patrón fábrica, para la creación de
 
 Este patrón se presenta bajo acoplamiento entre clases, que es el principio más importante se debe considerar y aplicar en el diseño de la arquitectonico de una aplicación. Acoplamiento débil puede estar presente en la arquitectura de aplicaciones mediante la programación de clases abstractas en lugar de implementaciones concretas. Esto no sólo hace a nuestra arquitectura más flexible, también menos frágil.
 
-As you can see, factory is able to return any type of car instance it is requested for. It will help us in making any kind of changes in car making process without even touching the composing classes i.e. classes using CarFactory.
+Ventajas del patrón de la fábrica
 
-Advantages of factory pattern
 
-By now, you should be able to count the main advantages of using factory pattern. Lets note down:
+La creación de un objeto impide su reutilización sin duplicación significativa de código. La creación de un objeto requiere el acceso a la información o recursos que no debe ser contenido dentro de la clase de composición. La gestión de vida de los objetos generados debe ser centralizada para garantizar un comportamiento coherente dentro de la aplicación. notas finales
 
-The creation of an object precludes its reuse without significant duplication of code.
-The creation of an object requires access to information or resources that should not be contained within the composing class.
-The lifetime management of the generated objects must be centralized to ensure a consistent behavior within the application.
-Final notes
-
-Final notes
-
-Factory pattern is most suitable where there is some complex object creation steps are involved. To ensure that these steps are centralized and not exposed to composing classes, factory pattern should be used. We can see many examples of factory pattern in JDK itself e.g.
+Patrón de fábrica es el más adecuado donde hay algunas medidas de creación de objetos complejos están involucrados. Para asegurarse de que estos pasos son centralizados y no expuesto a las clases de composición, se debe utilizar el patrón de fábrica. Podemos ver muchos ejemplos de patrón de fábrica en el propio JDK, por ejemplo:
 
 * java.sql.DriverManager#getConnection()
 * java.net.URL#openConnection()
 * java.lang.Class#newInstance()
 * java.lang.Class#forName()
-
-:)
