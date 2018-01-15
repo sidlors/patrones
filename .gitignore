@@ -1,2 +1,6 @@
-/.settings/
-/.project
+.settings/
+.project
+target/
+*.class
+.classpath
+.sts4-cache/
