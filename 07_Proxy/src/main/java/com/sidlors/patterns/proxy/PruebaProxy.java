@@ -1,3 +1,4 @@
+package com.sidlors.patterns.proxy;
 public class PruebaProxy{
 	PersonaProxy persona;
 

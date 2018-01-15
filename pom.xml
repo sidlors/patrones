@@ -35,5 +35,7 @@
 	</dependencies>
 	<modules>
 	<module>16_Estrategia</module>
+	<module>07_Proxy</module>
+	<module>01_Polimorfismo</module>
 	</modules>
 </project>
