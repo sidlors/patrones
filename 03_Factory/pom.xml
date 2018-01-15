@@ -7,6 +7,6 @@
 		<version>0.1-SNAPSHOT</version>	
 	</parent>
 	<description>Factory Design Patterns</description>
-	<artifactId>03_Fabrica</artifactId>
+	<artifactId>03_Factory</artifactId>
 	<packaging>jar</packaging>
 </project>
