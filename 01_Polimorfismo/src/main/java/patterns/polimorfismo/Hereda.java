@@ -1,3 +1,4 @@
+package com.sidlors.patterns.polimorfismo;
 public class Hereda implements Interface{
 	public Hereda(){
 		saludar();

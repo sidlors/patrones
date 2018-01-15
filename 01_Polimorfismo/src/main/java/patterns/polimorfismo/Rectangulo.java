@@ -1,3 +1,4 @@
+package com.sidlors.patterns.polimorfismo;
 public class Rectangulo extends Forma{
 	public Rectangulo(){
 		mover(5, 8);

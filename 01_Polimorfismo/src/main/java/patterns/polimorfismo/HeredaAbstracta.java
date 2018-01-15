@@ -1,3 +1,4 @@
+package com.sidlors.patterns.polimorfismo;
 public class HeredaAbstracta extends ClaseAbstracta{
 
 	@Override

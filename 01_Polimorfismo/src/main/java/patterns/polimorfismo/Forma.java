@@ -1,3 +1,4 @@
+package com.sidlors.patterns.polimorfismo;
 public abstract class Forma{
 	protected int posicionX;
 	protected int posicionY;

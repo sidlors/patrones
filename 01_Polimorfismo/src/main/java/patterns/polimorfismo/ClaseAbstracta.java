@@ -1,3 +1,4 @@
+package com.sidlors.patterns.polimorfismo;
 public abstract class ClaseAbstracta{
 	public String nombre;
 
