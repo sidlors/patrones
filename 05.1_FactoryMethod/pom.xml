@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>mx.com.sidors</groupId>
-  <artifactId>patrones-FactoryMethod</artifactId>
+  <artifactId>05.1_FactoryMethod</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>patrones-FactoryMethod</name>
+  <name>05.1_patrones-FactoryMethod</name>
   <url>http://maven.apache.org</url>
 
   <properties>
