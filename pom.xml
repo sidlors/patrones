@@ -42,6 +42,7 @@
 		<module>05_AbstractFactory</module>
 		<module>06_Prototype</module>
 		<module>07_Proxy</module>
+		<module>08_Adaptador</module>
 		<module>16_Estrategia</module>
 	</modules>
 </project>

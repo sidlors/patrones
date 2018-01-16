@@ -1,6 +1,7 @@
+package com.sidlors.patterns.adapter;
 import java.util.Scanner;
 
-public class PruebaAdaptador{
+public class PruebaNombre{
 
 	public static void main(String... args){
 		Scanner sc = new Scanner(System.in);
@@ -11,11 +12,10 @@ public class PruebaAdaptador{
 		System.out.print("Digite su nombre y apellido: ");
 		objetoNombre.setNombreCompuesto(sc.nextLine());
 
-		Adaptador adaptador = new Adaptador(objetoNombre);
-
 		System.out.println();
 		System.out.println();
-		System.out.println("Tu nombre es: "+adaptador.getNombre());
-		System.out.println("Tu apellido es: "+adaptador.getApellido());
+		System.out.println("Tu nombre completo es: "+
+			objetoNombre.getNombreCompuesto()
+		);
 	}
 }

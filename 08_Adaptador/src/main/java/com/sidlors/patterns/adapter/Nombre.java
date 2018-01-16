@@ -1,3 +1,4 @@
+package com.sidlors.patterns.adapter;
 public class Nombre implements INombre{
 	private String nombreCompleto;
 
