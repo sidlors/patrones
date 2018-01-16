@@ -1,3 +1,4 @@
+package com.sidlors.patterns.prototype;
 import java.util.Scanner;
 public class PruebaFiguras{
 	public static void main(String... args){
