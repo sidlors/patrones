@@ -44,6 +44,7 @@
 		<module>06_Prototype</module>
 		<module>07_Proxy</module>
 		<module>09_Fachada</module>
+		<module>12_Decorador</module>
 		<module>16_Estrategia</module>
 	</modules>
 </project>
