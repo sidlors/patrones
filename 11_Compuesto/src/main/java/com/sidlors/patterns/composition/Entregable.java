@@ -1,3 +1,4 @@
+package  com.sidlors.patterns.composition;
 public class Entregable implements ItemProyecto{
 
 	private String nombre;

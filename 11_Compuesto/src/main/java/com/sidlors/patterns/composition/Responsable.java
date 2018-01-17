@@ -1,3 +1,4 @@
+package  com.sidlors.patterns.composition;
 public class Responsable{
 	
 	private String nombre;
