@@ -1,3 +1,4 @@
+package com.sidlors.patterns.memento;
 import java.util.Scanner;
 
 public class PruebaMemento{

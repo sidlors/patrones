@@ -1,3 +1,4 @@
+package com.sidlors.patterns.memento;
 public class Registro{
 	private String nombre;
 	private int edad;

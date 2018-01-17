@@ -51,5 +51,6 @@
 		<module>14_Cadena</module>
 		<module>15_Estado</module>
 		<module>16_Estrategia</module>
+		<module>17_Memento</module>
 	</modules>
 </project>
