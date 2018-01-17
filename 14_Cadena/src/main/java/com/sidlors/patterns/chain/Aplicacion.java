@@ -1,3 +1,4 @@
+package com.sidlors.patterns.chain;
 public class Aplicacion implements InterfaceAyuda{
 	private final int TIPO_AYUDA = 3;
 

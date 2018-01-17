@@ -1,3 +1,4 @@
+package com.sidlors.patterns.chain;
 public class FrontEnd implements InterfaceAyuda{
 	private final int TIPO_AYUDA = 1;
 	private InterfaceAyuda susesor;

@@ -1,3 +1,4 @@
+package com.sidlors.patterns.chain;
 public class Middle implements InterfaceAyuda{
 	private final int TIPO_AYUDA = 2;
 	private InterfaceAyuda susesor;

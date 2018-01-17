@@ -1,3 +1,4 @@
+package com.sidlors.patterns.chain;
 import java.util.Scanner;
 
 public class PruebaCadena{
