@@ -1,3 +1,4 @@
+package com.sidlors.patterns.adaptador;
 public class Adaptador{
 	private Nombre objetoNombre;
 	private String nombre;

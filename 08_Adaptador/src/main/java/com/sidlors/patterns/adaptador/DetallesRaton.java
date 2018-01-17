@@ -1,3 +1,4 @@
+package com.sidlors.patterns.adaptador;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.event.MouseAdapter;

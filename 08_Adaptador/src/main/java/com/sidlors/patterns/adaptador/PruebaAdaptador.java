@@ -1,3 +1,4 @@
+package com.sidlors.patterns.adaptador;
 import java.util.Scanner;
 
 public class PruebaAdaptador{
