@@ -1,3 +1,4 @@
+package com.sidlors.patterns.state;
 import java.util.Scanner;
 
 public class PruebaEstado{

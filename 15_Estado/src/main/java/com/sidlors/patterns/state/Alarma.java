@@ -1,3 +1,4 @@
+package com.sidlors.patterns.state;
 public class Alarma{
 	private Estado miEstado;
 
