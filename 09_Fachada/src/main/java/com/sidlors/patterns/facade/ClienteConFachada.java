@@ -1,3 +1,4 @@
+package com.sidlors.patterns.facade;
 public class ClienteConFachada{
 	private Fachada miFachada;
 

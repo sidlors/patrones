@@ -1,7 +1,8 @@
-public class ClienteSinFachada{
+package com.sidlors.patterns.facade;
+public class Fachada{
 	private Cpu miCPU;
 
-	public ClienteSinFachada(){
+	public Fachada(){
 		miCPU = new Cpu();
 	}
 
@@ -23,13 +24,4 @@ public class ClienteSinFachada{
 		}
 	}
 
-	public void trabajar(){
-		System.out.println("COMIENZO A TRABAJAR!!!");
-	}
-
-	public static void main(String args[]){
-		ClienteSinFachada csf = new ClienteSinFachada();
-		csf.encenderCPU();
-		csf.trabajar();
-	}
 }

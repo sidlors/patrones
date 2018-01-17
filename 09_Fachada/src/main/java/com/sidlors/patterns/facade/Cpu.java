@@ -1,3 +1,4 @@
+package com.sidlors.patterns.facade;
 public class Cpu{
 	private int contadores = -1;
 	private int memoriaRam = 0;

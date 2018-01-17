@@ -4,9 +4,10 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 	<parent>
 		<groupId>mx.com.sidlors.patrones</groupId>
 		<artifactId>patrones</artifactId>
-		<version>0.1-SNAPSHOT</version>	
+		<version>0.1-SNAPSHOT</version>
 	</parent>
-	<description>Prototype  Patterns</description>
-	<artifactId>06_Prototype</artifactId>
+	<description>05_AbstractFactory Design Patterns</description>
+	<artifactId>05_AbstractFactory</artifactId>
 	<packaging>jar</packaging>
 </project>
+													
