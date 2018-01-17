@@ -52,5 +52,6 @@
 		<module>15_Estado</module>
 		<module>16_Estrategia</module>
 		<module>17_Memento</module>
+		<module>18_MetodoPlantilla	</module>
 	</modules>
 </project>

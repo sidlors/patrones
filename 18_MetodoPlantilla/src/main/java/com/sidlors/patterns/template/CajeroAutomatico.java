@@ -1,3 +1,4 @@
+package com.sidlors.patterns.template;
 public class CajeroAutomatico extends CuentaBancaria{
 	
 	public CajeroAutomatico(String c, int i, int t){

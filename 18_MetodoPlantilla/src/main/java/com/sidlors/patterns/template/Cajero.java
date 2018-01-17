@@ -1,3 +1,4 @@
+package com.sidlors.patterns.template;
 public class Cajero extends CuentaBancaria{
 	public Cajero(String c, int i, int t){
 		procesar(c,i,t);

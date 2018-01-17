@@ -1,3 +1,4 @@
+package com.sidlors.patterns.template;
 public class PruebaPlantilla{
 	public static void main(String... args){
 

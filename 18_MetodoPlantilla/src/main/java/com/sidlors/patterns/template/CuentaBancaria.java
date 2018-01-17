@@ -1,3 +1,4 @@
+package com.sidlors.patterns.template;
 public abstract class CuentaBancaria{
 	private String cuenta;
 	private int saldo = 0;
