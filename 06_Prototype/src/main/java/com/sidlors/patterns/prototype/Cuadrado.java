@@ -1,3 +1,4 @@
+package com.sidlors.patterns.prototype;
 public class Cuadrado implements Figura{
 	private String nombre;
 	private int posicionX, posicionY;

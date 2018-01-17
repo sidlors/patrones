@@ -1,3 +1,4 @@
+package com.sidlors.patterns.prototype;
 public class PruebaReferencias{	
 
 	public static void main(String... args){

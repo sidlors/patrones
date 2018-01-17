@@ -1,3 +1,6 @@
+package com.sidlors.patterns.prototype;
+
+
 public class Circulo implements Figura{
 	private String nombre;
 	private int posicionX, posicionY;

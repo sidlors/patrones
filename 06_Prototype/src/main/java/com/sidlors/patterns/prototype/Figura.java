@@ -1,3 +1,4 @@
+package com.sidlors.patterns.prototype;
 public interface Figura{
 	public void setNombre(String n);
 	public String getNombre();

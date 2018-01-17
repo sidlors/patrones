@@ -1,3 +1,4 @@
+package com.sidlors.patterns.prototype;
 public class Persona{
 	private String nombre;
 

@@ -1,5 +1,0 @@
-package com.sidlors.patterns.adaptador;
-public interface INombre{
-	public abstract void setNombreCompuesto(String n);
-	public abstract String getNombreCompuesto();
-}

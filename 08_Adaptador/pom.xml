@@ -1,9 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<<<<<<< HEAD
 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+=======
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+>>>>>>> 978d1d6a684d479b8986c9b3b732069d13aac7d4
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>mx.com.sidlors.patrones</groupId>
 		<artifactId>patrones</artifactId>
+<<<<<<< HEAD
 		<version>0.1-SNAPSHOT</version>
 	</parent>
 	<description>08_Adaptador Design Patterns</description>
@@ -11,3 +16,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 	<packaging>jar</packaging>
 </project>
 													
+=======
+		<version>0.1-SNAPSHOT</version>	
+	</parent>
+	<description>Prototype  Patterns</description>
+	<artifactId>08_Adaptador</artifactId>
+	<packaging>jar</packaging>
+</project>
+>>>>>>> 978d1d6a684d479b8986c9b3b732069d13aac7d4
