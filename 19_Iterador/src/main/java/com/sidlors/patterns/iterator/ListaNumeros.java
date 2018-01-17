@@ -1,3 +1,4 @@
+package com.sidlors.patterns.iterator;
 public class ListaNumeros{
 	private int numeros[];
 	private int posicion;

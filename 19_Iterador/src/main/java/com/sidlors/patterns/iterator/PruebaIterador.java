@@ -1,3 +1,4 @@
+package com.sidlors.patterns.iterator;
 public class PruebaIterador{
 	public static void main(String... args){
 		ListaNumeros ln = new ListaNumeros();
@@ -21,7 +22,7 @@ public class PruebaIterador{
 		iterador = ln.iterador();
 		while(iterador.tieneSiguiente()){
 			// Acceder al elemento
-			int numero = (int) iterador.siguiente();
+			int numero = (Integer)iterador.siguiente();
 			// Hacer algo con el elemento
 			System.out.println(numero);
 		}
