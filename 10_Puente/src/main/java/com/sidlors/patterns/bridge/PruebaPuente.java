@@ -1,3 +1,4 @@
+package  com.sidlors.patterns.bridge;
 import java.util.Scanner;
 
 public class PruebaPuente{

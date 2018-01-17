@@ -1,3 +1,4 @@
+package  com.sidlors.patterns.bridge;
 import java.util.ArrayList;
 
 public class ImpListaUnicos implements I_ImplLista{

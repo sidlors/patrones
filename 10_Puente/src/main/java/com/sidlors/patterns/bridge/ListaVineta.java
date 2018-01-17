@@ -1,3 +1,4 @@
+package  com.sidlors.patterns.bridge;
 public class ListaVineta extends ListasBase{
 
     private char tipoVineta;

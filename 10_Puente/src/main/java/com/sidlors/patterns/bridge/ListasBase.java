@@ -1,3 +1,4 @@
+package  com.sidlors.patterns.bridge;
 public class ListasBase{
 
 	protected I_ImplLista implementacion;

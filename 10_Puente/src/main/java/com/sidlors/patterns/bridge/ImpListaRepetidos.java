@@ -1,3 +1,4 @@
+package  com.sidlors.patterns.bridge;
 import java.util.ArrayList;
 
 public class ImpListaRepetidos implements I_ImplLista{

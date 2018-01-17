@@ -1,3 +1,5 @@
+package  com.sidlors.patterns.bridge;
+
 public interface I_ImplLista{
     public void addItem(String item);
     public void remItem(String item);
