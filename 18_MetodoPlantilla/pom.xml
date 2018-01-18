@@ -6,8 +6,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		<artifactId>patrones</artifactId>
 		<version>0.1-SNAPSHOT</version>
 	</parent>
-	<description>05_AbstractFactory Design Patterns</description>
-	<artifactId>05_AbstractFactory</artifactId>
+	<description>18_MetodoPlantilla Design Patterns</description>
+	<artifactId>18_MetodoPlantilla</artifactId>
 	<packaging>jar</packaging>
 </project>
 													

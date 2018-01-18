@@ -21,6 +21,7 @@
 					<source>1.6</source>
 					<target>1.6</target>
 				</configuration>
+				<version>3.1</version>
 			</plugin>
 		</plugins>
 	</build>
@@ -56,7 +57,18 @@
 		<module>04_Builder</module>
 		<module>05.1_FactoryMethod</module>
 		<module>05_AbstractFactory</module>
+		<module>06_Prototype</module>
 		<module>07_Proxy</module>
+		<module>09_Fachada</module>
+		<module>10_Puente</module>
+		<module>11_Compuesto</module>
+		<module>12_Decorador</module>
+		<module>13_Observador</module>
+		<module>14_Cadena</module>
+		<module>15_Estado</module>
 		<module>16_Estrategia</module>
+		<module>17_Memento</module>
+		<module>18_MetodoPlantilla</module>
+		<module>19_Iterador</module>
 	</modules>
 </project>
