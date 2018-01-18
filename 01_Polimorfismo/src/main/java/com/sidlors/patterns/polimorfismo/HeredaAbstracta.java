@@ -1,9 +1,17 @@
 package com.sidlors.patterns.polimorfismo;
+
+import org.apache.log4j.Logger;
+
+import com.sidlors.patterns.polimorfismo.abstracta.ClaseAbstracta;
+
 public class HeredaAbstracta extends ClaseAbstracta{
+	
+	private static final Logger logger = Logger.getLogger(HeredaAbstracta.class);
+
 
 	@Override
 	public void despedirse(){
-		System.out.println("Ciao "+super.nombre);
+		logger.info("Ciao "+super.nombre);
 	}
 
 	public HeredaAbstracta(){

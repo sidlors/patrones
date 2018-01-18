@@ -1,5 +1,11 @@
-package com.sidlors.patterns.polimorfismo;
+package com.sidlors.patterns.polimorfismo.abstracta;
+
+import org.apache.log4j.Logger;
+
 public abstract class Forma{
+	
+	private static final Logger log = Logger.getLogger(Forma.class);
+
 	protected int posicionX;
 	protected int posicionY;
 
@@ -11,7 +17,7 @@ public abstract class Forma{
 	protected void dondeEstoy(){
 	String lugar = "Estoy en X: "+posicionX+
 					" en Y: "+posicionY;
-	System.out.println(lugar);
+	log.info(lugar);
 	}
 
 	protected abstract void dibujar();

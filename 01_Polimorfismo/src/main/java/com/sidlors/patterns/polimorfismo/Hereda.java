@@ -1,5 +1,11 @@
 package com.sidlors.patterns.polimorfismo;
+
+import org.apache.log4j.Logger;
+
 public class Hereda implements Interface{
+	
+	private static final Logger logger = Logger.getLogger(Hereda.class);
+
 	public Hereda(){
 		saludar();
 	}
@@ -11,7 +17,7 @@ public class Hereda implements Interface{
 
 	@Override
 	public void saludar(){
-		System.out.println("Hola "+getNombre());
+		logger.info("Hola "+getNombre());
 	}
 
 	public static void main(String... args){

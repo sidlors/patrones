@@ -4,7 +4,7 @@
 
 	<groupId>mx.com.sidlors.patrones</groupId>
 	<artifactId>patrones</artifactId>
-	<version>0.1-SNAPSHOT</version>	
+	<version>0.1-SNAPSHOT</version>
 	<description>Project to GOF Design Patterns</description>
 	<packaging>pom</packaging>
 
@@ -31,6 +31,22 @@
 			<artifactId>junit</artifactId>
 			<version>4.8</version>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.10.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.10.0</version>
 		</dependency>
 	</dependencies>
 	<modules>
