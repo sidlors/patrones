@@ -1,4 +1,4 @@
-#Observer
+# Observer
 
 
 Observador (en inglés: Observer) Se trata de un patrón de comportamiento, es un patrón de diseño que define una dependencia del tipo uno-a-muchos entre objetos, de manera que cuando uno de los objetos cambia
@@ -6,21 +6,23 @@ su estado, notifica este cambio a todos los dependientes. es decir, está relaci
 Los patrones de comportamiento describen no solamente estructuras de relación entre objetos o clases sino también esquemas de comunicación entre ellos y se pueden clasificar
 en función de que trabajen con clases (Método Plantilla) u objetos (Cadena de Responsabilidad, Comando, Iterador, Recuerdo, Observador, Estado, Estrategia, Visitante).
 
-Los principios de diseño detras de este patron son:
+La idea principal detrás del patrón observer es que existe una _entidad_ con estados cambiantes y una o más entidades observándola. Los _observadores_ esperan a que la entidad observada les informe de un cambio de estado a través de un evento que puede ser de su interés, por lo que los observadores se registran con la entidad observada.
 
-   1. 
-   2. 
-   3. 
+Cuando ocurre un evento, la entidad observada mira en su lista de observadores y notifica a aquellos que se registraron para recibir eventos de ese tipo. Los observadores dejaron instrucciones detalladas de como puede la entidad observada ponerse en contacto con ellos para recibir los eventos. A este patrón también se le llama El Principio de Hollywood como parodia de la típica frase de Hollywood “te llamaremos en cuanto tengamos un papel para ti“.
+
+Cualquier elemento que quiera ser observado tiene que permitir indicar:
+
+“Estoy interesado en tus cambios”.
+“Ya no estoy interesado en tus cambios”.
    
 
-###Diagrama UML
+### Diagrama UML
 
 ![](https://upload.wikimedia.org/wikipedia/commons/9/97/EstructuraPatronObservador.png)
 
-
 ![](https://upload.wikimedia.org/wikipedia/commons/4/41/SecuenciaObservador.png)
 
-###Participantes
+### Participantes
 
 Tendremos sujetos concretos cuyos cambios pueden resultar interesantes a otros y observadores a los que al menos les interesa estar pendientes de un elemento y en un momento
 dado, reaccionar ante sus notificaciones de cambio. Todos los sujetos tienen en común que un conjunto de objetos quieren estar pendientes de ellos. 
@@ -40,12 +42,12 @@ El observable tiene que tener, además, un mecanismo de aviso a los interesados.
  que observan, así en caso de ser notificados de algún cambio, pueden preguntar sobre este cambio.
 
 
-##Nuestro Ejemplo
+## Nuestro Ejemplo
 
 
 
 
-###Java Observer Build-It
+### Java Observer Build-It
 
 Existe un API en java que nso permite definir a los objetos participantes de este patron de diseño.
 
