@@ -19,7 +19,6 @@ public abstract class Forma{
 					" en Y: "+posicionY;
 	log.info(lugar);
 	}
-
-	protected abstract void dibujar();
-	protected abstract void redimensionar();
+	public  abstract void dibujar();
+	public  abstract void redimensionar();
 }

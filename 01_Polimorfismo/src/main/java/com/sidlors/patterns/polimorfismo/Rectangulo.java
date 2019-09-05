@@ -1,26 +1,22 @@
 package com.sidlors.patterns.polimorfismo;
 
-import org.apache.log4j.Logger;
-
 import com.sidlors.patterns.polimorfismo.abstracta.Forma;
 
-public class Rectangulo extends Forma {
-
-	private static final Logger logger = Logger.getLogger(Rectangulo.class);
-
+public class Rectangulo extends Forma{
+	
 	public Rectangulo() {
 		mover(5, 8);
 		dondeEstoy();
 	}
 
 	@Override
-	public void dibujar() {
-		logger.info("Estoy dibujando un Rectangulo");
+	public void dibujar(){
+		System.out.println("Estoy dibujando un Rectangulo");
 	}
 
 	@Override
-	public void redimensionar() {
-		logger.info("Estoy siendo mas grande");
+	public void redimensionar(){
+		System.out.println("Estoy siendo mas grande");
 	}
 
 }

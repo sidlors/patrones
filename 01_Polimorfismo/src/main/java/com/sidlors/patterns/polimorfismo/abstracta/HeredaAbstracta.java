@@ -1,4 +1,4 @@
-package com.sidlors.patterns.polimorfismo;
+package com.sidlors.patterns.polimorfismo.abstracta;
 
 import org.apache.log4j.Logger;
 
