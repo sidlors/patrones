@@ -9,4 +9,12 @@
 	<description>Observer Design Patterns</description>
 	<artifactId>13_Observador</artifactId>
 	<packaging>jar</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version> <!-- Or whatever JUnit you're using. -->
+		</dependency>
+	</dependencies>
 </project>
