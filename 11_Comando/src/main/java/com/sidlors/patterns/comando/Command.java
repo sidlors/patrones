@@ -1,5 +1,6 @@
 package com.sidlors.patterns.comando;
 
-public class Commando{
+public interface Command{
     
+    public void execute();
 }

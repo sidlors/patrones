@@ -2,6 +2,10 @@ package com.sidlors.patterns.comando;
 
 public class RemoteControl{
 
+    Command[] onCommands;
+    Command[] offCommands;
+    NoCommand noCommand;
+
     public RemoteControl(){
       onCommands= new Command[7];
       offCommands= new Command[7];
@@ -14,7 +18,7 @@ public class RemoteControl{
     }
 
     public void setCommand(int slot, Command onCommand, Command offCommand){
-        onCommand[slot]=onCommand;
+        onCommands[slot]=onCommand;
         offCommands[slot]=offCommand;
     }
 
@@ -22,7 +26,7 @@ public class RemoteControl{
         onCommands[slot].execute();
     }
 
-    public void offButtomWasPushed(){
+    public void offButtomWasPushed(int slot){
         offCommands[slot].execute();
 
     }
