@@ -51,17 +51,19 @@
 		</dependency>
 	</dependencies>
 	<modules>
+		<module>00_Compuesto</module>
 		<module>01_Polimorfismo</module>
 		<module>02_Singleton</module>
 		<module>03_Factory</module>
 		<module>04_Builder</module>
+        <module>04.1_Builder</module>
 		<module>05.1_FactoryMethod</module>
 		<module>05_AbstractFactory</module>
 		<module>06_Prototype</module>
 		<module>07_Proxy</module>
 		<module>09_Fachada</module>
 		<module>10_Puente</module>
-		<module>11_Compuesto</module>
+		<module>11_Comando</module>
 		<module>12_Decorador</module>
 		<module>13_Observador</module>
 		<module>14_Cadena</module>
